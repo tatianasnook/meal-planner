@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const routes = require('./MealRoutes');
 
-const mongoose = require('mongoose');
 require('dotenv').config();
+
 mongoose.set('strictQuery', false);
 
 const PORT = 4000 || process.env.port
