@@ -7,7 +7,7 @@ require('dotenv').config();
 
 mongoose.set('strictQuery', false);
 
-const PORT = 4000 || process.env.port
+const PORT = 4000 || process.env.port;
 
 mongoose
 .connect(process.env.MONGOBD_LINK)
