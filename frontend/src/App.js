@@ -9,7 +9,10 @@ function App() {
       type="text"
       placeholder="Add a meal"
       />
-      <button>ADD</button>
+      <button>Add</button>
+      <p>
+        Test
+      </p>
     </div>
   )
 }
