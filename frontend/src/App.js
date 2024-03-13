@@ -12,7 +12,7 @@ function App() {
       />
       <button>Add</button>
       
-      <MyMeals/>
+      <MyMeals text="WE GOT HERE"/>
     </div>
   )
 }
