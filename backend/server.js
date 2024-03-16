@@ -18,7 +18,7 @@ mongoose
 .then(() => console.log('WE WERE CONNECTED TO MONGO'))
 .catch((err) => console.log(err))
 
-app.use(routes)
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`I AM LISTENING on PORT ${PORT}`)
