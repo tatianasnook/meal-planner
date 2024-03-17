@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose
-.connect(process.env.MONGOBD_LINK)
+.connect(process.env.MONGODB_LINK)
 .then(() => console.log('WE WERE CONNECTED TO MONGO'))
 .catch((err) => console.log(err))
 

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { MyMeals } from './MyMeals';
-import { getAllMeals } from './FetchMeals';
+import { getAllMeals, addMeal } from './FetchMeals';
 
 function App() {
   const [myMeal, setMeal] = useState([])  
+  const [title, setTitle] = useState("")
 
   useEffect(() => {
     getAllMeals(setMeal)
@@ -14,14 +15,20 @@ function App() {
     <div>
       <h1>Meal Plan</h1>
       <input
-      type="text"
-      placeholder="Add a meal"
+        type="text"
+        placeholder="Add a meal"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
-      <button>Add</button>
+
+      <button onClick={() => addMeal(title, setTitle, setMeal)}>
+        Add
+      </button>
       
       {/* <MyMeals text="WE GOT HERE"/> */}
 
-      {myMeal.map((meal) => <MyMeals text={meal.title}/>)}
+      {myMeal.map((meal) => <MyMeals text={meal.title} key={meal._id}/>
+      )}
 
     </div>
   )
